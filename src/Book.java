@@ -4,8 +4,18 @@ public class Book extends Product {
     private int pages;
 
     @Override
+    public boolean equals (Object object) {
+        if (this.toString().equalsIgnoreCase(object.toString())) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    @Override
     public String toString()  {
-        return "Book written by "  + author;
+        return this.getDescription() + " written by "  + author + " with code: " + this.getCode();
     }
 
     public String getAuthor() {

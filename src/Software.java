@@ -4,9 +4,21 @@ public class Software extends Product {
     private String platform; // linux, mac, or pc
     private String os;
 
+
+
+    @Override
+    public boolean equals (Object object) {
+        if (this.toString().equalsIgnoreCase(object.toString())) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     @Override
     public String toString() {
-        return "Software developped by " + programmer;
+        return this.getDescription() + " developped by " + programmer;
     }
 
     public String getProgrammer() {

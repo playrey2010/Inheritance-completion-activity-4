@@ -42,11 +42,22 @@ public class Product {
 //Methods
     @Override
     public String toString() {
-        return "Code:                " + code + "\n" +
+        return "Code:               " + code + "\n" +
                 "Description:        " + description + "\n" +
                 "Price:              " + this.getFormattedPrice() + "\n";
     }
+
+    @Override
+    public boolean equals (Object object) {
+        if (this.toString().equalsIgnoreCase(object.toString())) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
     // Use the NumberFormat class to format the price to 2 decimal places
+    // Notice: this is a private method. It is accessed within this same class.
     private String getFormattedPrice() {
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         currency.setMaximumFractionDigits(2);
