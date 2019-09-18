@@ -1,21 +1,24 @@
 public class ProductApp {
     public static void main(String[] args) {
-        // instantiate Products
-        Product p = new Product();
-        p.setCode("381043jgsh38");
-        p.setDescription("a cheap car");
-        p.setPrice(5000);
-        //creating a new product with same values for its members to test the overriden equals()
-        Product p1 = new Product();
-        p1.setCode("381043jgsh38");
-        p1.setDescription("a cheap car");
-        p1.setPrice(5000);
 
-        System.out.println("The overriden equals() method uses the overriden toString() to compare both objects. ");
-        System.out.println("p.toString() yields: \n" + p.toString());
-        System.out.println("p1.toString() yields: \n" + p1.toString());
-        // trying the overriden equals method for Product class
-        System.out.println("Comparing p to p1: " + p.equals(p1));
+        // Products no longer instantiated as they are now part of an abstract class. The rest, however, work fine.
+
+        // instantiate Products
+//        Product p = new Product();
+//        p.setCode("381043jgsh38");
+//        p.setDescription("a cheap car");
+//        p.setPrice(5000);
+//        //creating a new product with same values for its members to test the overriden equals()
+//        Product p1 = new Product();
+//        p1.setCode("381043jgsh38");
+//        p1.setDescription("a cheap car");
+//        p1.setPrice(5000);
+//
+//        System.out.println("The overriden equals() method uses the overriden toString() to compare both objects. ");
+//        System.out.println("p.toString() yields: \n" + p.toString());
+//        System.out.println("p1.toString() yields: \n" + p1.toString());
+//        // trying the overriden equals method for Product class
+//        System.out.println("Comparing p to p1: " + p.equals(p1));
 
         // Instantiate books
         Book b = new Book();
